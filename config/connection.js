@@ -8,7 +8,7 @@ if (process.env.JAWSDB_URL) {
         host: "localhost",
         user: "root",
         password: "root",
-        database: "project2_db"
+        database: "dinder_db"
     });
 };
 
