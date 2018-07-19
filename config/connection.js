@@ -10,7 +10,7 @@ if (process.env.JAWSDB_URL) {
         password: "root",
         database: "dinder_db"
     });
-};
+}
 
 connection.connect();
 module.exports = connection;
