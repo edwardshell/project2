@@ -1,4 +1,4 @@
-var zomato = require("zomato");
+var zomato = require("npm-zomato-search");
 
 var globalCity;
 var globalState;
