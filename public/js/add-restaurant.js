@@ -28,7 +28,7 @@ function searchZomato() {
     userKey: "591abf213dbc64871a5d5ab5740a00ed" //as obtained from [Zomato API](https://developers.zomato.com/apis)
   });
 
-  var searchTerm = $("#new-restaurant").val().trim();
+  var searchTerm = $("#restaurant-name").val().trim();
   // variable for grabbing search term out of form
 
   client.search(
@@ -62,10 +62,10 @@ function parseZomato(data) {
   var phone = data.restaurant.phone_numbers;
 
   console.log(data);
-  dinderDB(name, address, cuisines, image, rating, website, phone);
+  restaurantDB(name, address, cuisines, image, rating, website, phone);
 }
 
-function dinderDB(name, address, cuisines, image, rating, website, phone) {
+function restaurantDB(name, address, cuisines, image, rating, website, phone) {
   var restaurant = {
     user_name: $("#username").val().trim(),
     group_name: $("#groupname").val().trim(),
@@ -78,10 +78,10 @@ function dinderDB(name, address, cuisines, image, rating, website, phone) {
     website: website,
   }
 
-  $.post("api/restaurants", restaurant, function(data) {
+  $.post("api/newRestaurant", restaurant, function(data) {
     console.log("data saved", data);
     $("#username").val("");
-    $("#new-restaurant").val("");
+    $("#restaurant-name").val("");
   });
   
 } 
