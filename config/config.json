@@ -17,11 +17,11 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": "root",
-    "database": "dinder_db",
-    "host": "127.0.0.1",
-    "socketPath": "/Applications/MAMP/tmp/mysql/mysql.sock",
+    "username": "qfu8fl81ln3zjmo7",
+    "password": "ayrcx6tt5twdv3sb",
+    "database": "mdwpfj0mk61olm29",
+    "port": 3306,
+    "host": "k3xio06abqa902qt.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql"
   }
 }
