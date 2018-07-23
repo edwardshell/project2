@@ -39,9 +39,10 @@ function searchZomato() {
     },
     function(err, result) {
       if (!err) {
-        var data = result.restaurants[0];
-        parseZomato(data);
-        console.log(data);
+        var temp = JSON.parse(result, null, 2);
+        console.log(temp.restaurants[0].restaurant.name);
+        parseZomato(temp);
+        console.log(temp.restaurants[0].restaurant.name);
       } else {
         console.log(err);
       }
@@ -51,15 +52,15 @@ function searchZomato() {
 
 // Get wanted data from object and assign them to variables and assign values to respective columns in db
 
-function parseZomato(data) {
+function parseZomato(temp) {
   
-  var name = data.restaurant.name;
-  var address = data.restaurant.location.address;
-  var cuisines = data.restaurant.cuisines;
-  var image = data.restaurant.featured_image;
-  var rating = data.restaurant.user_rating.aggregate_rating;
-  var website = data.restaurant.url;
-  var phone = data.restaurant.phone_numbers;
+  var name = temp.restaurants[0].restaurant.name;
+  var address = temp.restaurants[0].restaurant.location.address;
+  var cuisines = temp.restaurants[0].restaurant.cuisines;
+  var image = temp.restaurants[0].restaurant.featured_image;
+  var rating = temp.restaurants[0].restaurant.user_rating.aggregate_rating;
+  var website = temp.restaurants[0].restaurant.url;
+  var phone = temp.restaurants[0].restaurant.phone_numbers;
 
   console.log(data);
   dinderDB(name, address, cuisines, image, rating, website, phone);
