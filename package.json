@@ -20,6 +20,16 @@
   "bugs": {
     "url": "https://github.com/oscarsolorzano/project2/issues"
   },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "mysql2": "^1.5.3",
+    "npm-zomato-search": "^1.0.2",
+    "path": "^0.12.7",
+    "sequelize": "^4.38.0"
+  },
   "homepage": "https://github.com/oscarsolorzano/project2",
   "main": "old find-group.js"
 }
