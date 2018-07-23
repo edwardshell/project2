@@ -76,7 +76,7 @@ function dinderDB(name, address, cuisines, image, rating, website, phone) {
     rating: rating,
     photo: image,
     website: website,
-  }
+  };
 
   $.post("api/restaurants", restaurant, function(data) {
     console.log("data saved", data);
