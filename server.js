@@ -13,8 +13,8 @@ app.use(bodyParser.json());
 app.use(express.static("public"));
 
 // Routes
-require("./controllers/apiRoutes")(app);
-require("./controllers/htmlRoutes")(app);
+require("./routing/apiRoutes")(app);
+require("./routing/htmlRoutes")(app);
 
 var syncOptions = { force: false };
 
