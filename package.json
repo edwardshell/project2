@@ -2,12 +2,8 @@
   "name": "dinder",
   "version": "1.0.0",
   "description": "Use this to get your significant other not to argue about where to go eat!",
-  "dependencies": {
-    "sequelize": "^4.38.0"
-  },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
   "repository": {
