@@ -1,4 +1,4 @@
-var db = require("../models/lunch.js");
+var db = require("../models/dinder.js");
 
 var express = require("express");
 
