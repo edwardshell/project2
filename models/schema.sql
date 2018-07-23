@@ -1,2 +1,0 @@
-DROP DATABASE IF EXISTS dinder_db;
-CREATE DATABASE dinder_db;
