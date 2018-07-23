@@ -1,18 +1,20 @@
-var db = require("../models/dinder.js");
 
-var express = require("express");
+var db = require("../models/dinder.js");
+var express = require('express');
+
 
 module.exports = function (app) {
 
   app.get("/api/groups", function (req, res) {
     db.findAll({
       attributes:
-        ["group_name"], group: ["group_name"]
+      ['group_name'], group: ['group_name']
     })
       .then(function (data) {
         res.json(data);
-      });
+      })
   });
+
 
   app.get("/api/groups/:group", function (req, res) {
     db.findAll({
@@ -20,11 +22,11 @@ module.exports = function (app) {
         group_name: req.params.group
       },
       attributes:
-        ["group_name", "user_name"]
+      ['group_name', 'user_name']
     })
       .then(function (data) {
         res.json(data);
-      });
+      })
   });
 
 
@@ -37,6 +39,7 @@ module.exports = function (app) {
       res.json(data);
     });
   });
+
 
   app.post("/api/newRestaurant", function (req, res) {
     console.log(req.body);
@@ -55,19 +58,21 @@ module.exports = function (app) {
       });
   });
 
-  app.get("/api/pickRestaurant/:group", function (req, res) {
+
+  app.get("/api/pickRestaurant/:group", function(req, res){
     db.findAll({
       where: {
         group_name: req.params.group,
-        restaurant_name: {
+        restaurant_name:{
           $ne: null
         }
       },
       attributes:
-        ["restaurant_name", "address", "phone", "rating", "photo", "website"]
-    }).then(function (data) {
-      res.json(data);
-    });
-  });
+      ['restaurant_name', 'address', 'phone', 'rating', 'photo', 'website']
+  }).then(function (data) {
+    res.json(data);
+  })
+});
 
 };
+

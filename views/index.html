@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <title>dinder</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="/css/loading-btn.css">
+  <link rel="stylesheet" type="text/css" href="/css/loading.css">
+  
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+
+  <link rel="shortcut icon" href="/images/favicon-16x16.png" type="image/x-icon">
+
+ 
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCCjIgTt1g9A5RbibI7lN8vsHSlbsnj0rI&libraries=places&language=en"></script>
+
+  <link rel="stylesheet" type="text/css" media="all" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/smoothness/jquery-ui.css"
+  />
+
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <div id="hero-div">
+    <div id="hero-text">
+      <h1>Decisions are hard.
+        <br> Let us help.</h1>
+      <button id="hero-btn" type="button" class="btn btn-link">
+        <h2>Get started</h2>
+        <span class="glyphicon glyphicon-chevron-down bounce" aria-hidden="true"></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-3">
+        <button id="make-group-btn" type="button" class="btn btn-link">
+          <span class="glyphicon glyphicon-flash" aria-hidden="true"></span>
+          Create Group
+        </button>
+        <button id="existing-group-btn" type="button" class="btn btn-link">
+          <span class="glyphicon glyphicon-fire" aria-hidden="true"></span>
+          Find a Group
+        </button>
+      </div>
+    </div>
+
+    <div class="introduction" class="row">
+      <p id="intro">"I don't know, where do you want to go?"
+        <h2>This is the main reason couples fight.
+          <br>
+          <br> </h2>
+        <h3>We are here to help. dinder is the premier application for finding and selecting restaurants when your signigicant other
+          just can't agree.
+          <br>
+          <br> Plan your next date by creating a group for restaurants, entering your name, and suggesting whatever restaurant tickles
+          your fancy. Click "Pick Restaurant" and let dinder do the rest! </h3>
+    </div>
+
+    <div id="new-group-form" class="row">
+      <div class="col-xs-4 col-sm-offset-4 text-center">
+
+        <p class="form-heading">Group Name</p>
+        <input class="form-control" id="new-group" placeholder="Enter Your Group Name">
+        <br>
+        <br>
+
+      
+        <button id="submit-new-grp" type="button" class="btn btn-link">
+          Create Group
+        </button>
+      </div>
+    </div>
+
+    <div id="existing-group-form" class="row">
+      <div class="col-xs-4 col-sm-offset-4 text-center">
+        <p class="form-heading">Group Name</p>
+        <input class="form-control" id="existing-group" placeholder="Find Your Group Name">
+        <br>
+        <br>
+        <button id="find-group" type="button" class="btn btn-link">
+          <p>Find Group</p>
+        </button>
+        
+      </div>
+    </div>
+
+
+    <div id="group-form" class="row">
+      <div class="col-xs-4 col-sm-offset-2 text-center">
+        <div id="display-group">
+          <div id="group-name">
+            <span id="groupName"></span>
+          </div>
+
+          <div id="user-list">
+            <p id="members">Members:</p>
+            <br>
+            <span id="userNames"></span>
+          </div>
+
+        </div>
+        <br>
+
+
+        <button id="pick-restaurant" type="button" class="btn btn-link">Pick Restaurant</button>
+        <br>
+        <br>
+        <div id="pick-form">
+          <div id="restaurantCard">
+
+            <div id="pick-result"></div>
+            <div id="nameDiv"></div>
+            <div id="addrDiv"></div>
+            <div id="phoneDiv"></div>
+            <div id="ratingDiv"></div>
+            <div id="photoDiv"></div>
+            <div id="websiteDiv"></div>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div class="col-xs-4 text-center">
+        <div id="new-restaurant">
+          <p id="rest-form-heading">What are you in the mood for?</p>
+         
+          <p class="rest-heading">User Name</p>
+          <input class="form-control" id="username" placeholder="Enter Your Name">
+          <br>
+
+          <p class="rest-heading">Location</p>
+          <input class="form-control" id="location" placeholder="City and State">
+          <br>
+
+          <div id="rest-list">
+            <p id="rest-name" class="rest-heading">Restaurant Suggestion</p>
+            <input class="form-control" id="restaurant-name" placeholder="Enter a Restaurant Suggestion">
+            <br>
+
+            <button id="submit-pick" type="button" class="btn btn-link" data-toggle="modal" data-target="#exampleModal">Add</button>
+
+            <br>
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="all-groups" class="row">
+      <div class="col-xs-4 col-sm-offset-4 text-center">
+
+        <div id="allGroups">
+          <div id="allGroupsHead">All Groups</div>
+          <div id="allGroupsList"></div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-7 center-align">
+        <div id="mapContainer" class="">
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="footer navbar-fixed-bottom">
+      <p id="foot-text"> Authors: Oscar, Jeff, Edward, Raj</p>
+      <div class="copyright">
+        <p id="copywrite"> &copy; 2018 </p>
+      </div>
+    </div>
+
+  </div>
+
+  
+
+  <script type="text/javascript" src="/js/find-group.js"></script>
+  <script type="text/javascript" src="/js/create-group.js"></script>
+  <script type="text/javascript" src="/js/dinder.js"></script>
+  <script type="text/javascript" src="/js/map.js"></script>
+  <script type="text/javascript" src="/js/add-restaurant.js"></script>
+</body>
+
+</html>

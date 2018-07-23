@@ -1,15 +1,25 @@
 {
-  "name": "project2",
+  "name": "dinder",
   "version": "1.0.0",
-  "description": "Project 2 Starter",
-  "main": "server.js",
-  "scripts": {
-    "start": "node server.js",
-    "lint": "eslint **/*.js --quiet",
-    "fix": "eslint --fix .",
-    "test": "npm run lint && NODE_ENV=test mocha -u tdd --reporter spec --exit"
+  "description": "Use this to get your significant other not to argue about where to go eat!",
+  "dependencies": {
+    "sequelize": "^4.38.0"
   },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oscarsolorzano/project2.git"
+  },
+  "keywords": [],
+  "author": "Raj, Oscar, Ed, Jeff",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oscarsolorzano/project2/issues"
+  },
   "dependencies": {
     "body-parser": "^1.18.3",
     "dotenv": "^6.0.0",
@@ -20,13 +30,6 @@
     "path": "^0.12.7",
     "sequelize": "^4.38.0"
   },
-  "devDependencies": {
-    "chai": "^4.1.2",
-    "chai-http": "^4.0.0",
-    "eslint": "^4.19.1",
-    "eslint-config-prettier": "^2.9.0",
-    "eslint-plugin-prettier": "^2.6.2",
-    "mocha": "^5.2.0",
-    "prettier": "^1.13.7"
-  }
+  "homepage": "https://github.com/oscarsolorzano/project2",
+  "main": "old find-group.js"
 }
