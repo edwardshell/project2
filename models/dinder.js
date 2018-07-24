@@ -1,7 +1,7 @@
 var Sequelize = require("sequelize");
 var sequelize = require("../config/connection.js");
 
-var Dinder = sequelize.define("dinder", {
+var Dinder = sequelize.define("mdwpfj0mk61olm29", {
   group_name: {
     type: Sequelize.STRING
   },
