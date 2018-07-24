@@ -1,11 +1,6 @@
-/* Colors
-===================
-Gray: #99908C; 
-Exorcist Green: #787825;
-Burger Bun orange: ##ff655b; */
 
 body {
-  /* background-image: url("images/1.jpg"); */
+  /* background-image: url("images/background.png"); */
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
@@ -18,22 +13,22 @@ body {
 /* Splash Page */
 /* ================================ */
 #hero-div {
-  /* background-image: url("images/hero_image.png"); */
+  background-image: url("images/logo-hero.png");
   background-size: cover;
   position: relative;
   background-position: center;
-  max-width: 100vw;
-  min-height: 100vh;
+  max-width: 70vw;
+  min-height: 90vh;
   margin-right: 0px;
   display: block;
   margin: auto;
 }
 
 #hero-text h1 {
-  text-align: left;
+  text-align: center;
   position: absolute;
   top: 52%;
-  left: 41%;
+  left: 50%;
   transform: translate(-50%, -50%);
   font-size: 2rem;
   color: #ff655b;
@@ -42,8 +37,8 @@ body {
 
 #hero-btn {
   position: absolute;
-  top: 70%;
-  left: 30.5%;
+  top: 85%;
+  left: 50%;
   transform: translate(-50%, -50%);
   color: #ff655b;
   text-decoration: none;
