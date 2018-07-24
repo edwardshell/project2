@@ -6,11 +6,11 @@ Welcome to Dinder, the Tinder for restaurants. Tinder is an application that pro
 
 The user can create a group by going to *Group Name* and typing in the required information:
 
-![Home Page](./public/images/readmeImg1.jpg)
+![Group Name](./public/images/readmeImg1.jpg)
 
 Here the user can also find groups by going to *Find a Group*:
 
-![Home Page](./public/images/readmeImg2.jpg)
+![Find Group](./public/images/readmeImg2.jpg)
 
 ## Instructions
 
